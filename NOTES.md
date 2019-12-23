@@ -26,6 +26,8 @@ K8 Objects
 
     Services - sets up networking in k8 cluster
 
+        Node Port - exposes a container to the outside (used for dev purposes)
+
 API Version
 
     each api defines a  different set  of objects such as a pod to use
