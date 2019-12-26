@@ -16,6 +16,22 @@ Kubernetes commands
 
     get services - prints running services
 
+    get deployment
+
+    describe <obj type> <obj name> - print info about obj, events during lifecycle of pod
+
+    delete -f <filename> - used to delete pod or service
+
+Kuberbetes
+
+    - system to deploy containerized apps
+    - Nodes , individual machines or vms that run containers
+    - Masters - machines or vms with set of program to manage nodes
+    - k8 gets images from else where , does not build  images
+    - kubernetes (the master) decided where to run each container , each node can run dissimilar set of containers
+    - to deploy update the master's state with config file
+    -the master works contasntly to meet your desired state
+
 K8 Objects
 
     Pods - used to run a container, smallest requirement needed to run containers with k8
