@@ -1,12 +1,16 @@
 apiVersion: apps/v1
+# api version allows us access to different objects
 kind: Deployment
+# type of object
 metadata:
   name: client-deployment
 spec:
   replicas: 1
+  # number of instances of objects
   selector:
     matchLabels:
       component: web
+      # used to match with template below
   template:
     metadata:
       labels:
@@ -14,6 +18,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: ozkhan/multi-client
+          image: stephengrider/multi-client
+          # image build from docker hub
           ports:
-            - containerPort: 3000
+            - containerPort: 9999

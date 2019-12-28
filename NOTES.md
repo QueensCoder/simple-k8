@@ -14,6 +14,8 @@ Kubernetes commands
 
     get pods - print running status of pods
 
+        -o wide - will show ips per pod
+
     get services - prints running services
 
     get deployment
@@ -48,3 +50,23 @@ API Version
 
     each api defines a  different set  of objects such as a pod to use
     look up the api versions required for the needed objects
+
+Use latest images upon update
+
+    - Version control
+
+        - manually tag each new version of an image
+        when config file is changed then the change is accepted
+
+        - drawbacks extra step adde for deployment
+            team now has to keep track of and ensure proper version is being worked
+        - have to apply new changes to config file
+
+        imperative command
+            - tag image
+            - use imperative command to have kubectle look for latest versions
+
+            kubectle set image <obj type> / <obj type> <container name> = <new_image>
+
+            ex:
+                kubectl set image deployment/client-deployment client=ozkhan/multi-client:v1
